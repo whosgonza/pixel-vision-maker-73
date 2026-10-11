@@ -37,7 +37,7 @@ function readDims(file: File) {
   });
 }
 
-function UploadCard({ label, hint, preview, error, onFile }: { label: string; hint: string; preview?: string; error?: string; onFile: (f: File) => void }) {
+function UploadCard({ label, hint, preview, error, onFile }: { label: string; hint: string; preview?: string | undefined; error?: string | undefined; onFile: (f: File) => void }) {
   const ref = useRef<HTMLInputElement>(null);
   const [over, setOver] = useState(false);
   return (
